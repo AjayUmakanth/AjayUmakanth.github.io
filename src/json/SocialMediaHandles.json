@@ -1,0 +1,32 @@
+[
+  {
+    "Type": "Email",
+    "Name": "ajayunp@gmail.com",
+    "Class": "fa fa-envelope",
+    "Link": "mailto:ajayunp@gmail.com"
+  },
+  {
+    "Type": "LinkedIn",
+    "Name": "Ajay Umakanth",
+    "Class": "fa fa-linkedin",
+    "Link": "https://www.linkedin.com/in/ajay-umakanth-83663316b"
+  },
+  {
+    "Type": "GitHub",
+    "Name": "Ajay Umakanth",
+    "Class": "fa fa-github",
+    "Link": "https://github.com/AjayUmakanth"
+  },
+  {
+    "Type": "Instagram",
+    "Name": "theajayumakanth",
+    "Class": "fa fa-instagram",
+    "Link": "https://www.instagram.com/theajayumakanth"
+  },
+  {
+    "Type": "Facebook",
+    "Name": "Ajay Umakanth",
+    "Class": "fa fa-facebook-square",
+    "Link": "https://www.facebook.com/ajay.umakanth"
+  }
+]

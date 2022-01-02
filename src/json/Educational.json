@@ -1,0 +1,26 @@
+[
+  {
+    "Institution": "RNS Institute of Technology",
+    "Course": "BE, Computer Science",
+    "From": 2016,
+    "To": 2020,
+    "Link": "https://www.rnsit.ac.in/",
+    "ImageName": "RNSIT.jpg"
+  },
+  {
+    "Institution": "Sri Bhagawan Mahaveer Jain College",
+    "Course": "Pre University College",
+    "From": 2014,
+    "To": 2016,
+    "Link": "https://www.jaincollege.ac.in/",
+    "ImageName": "SBMJC.png"
+  },
+  {
+    "Institution": "Florence Public School",
+    "Course": "School",
+    "From": 2001,
+    "To": 2004,
+    "Link": "https://www.florenceschool.edu.in/",
+    "ImageName": "FPS.png"
+  }
+]

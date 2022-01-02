@@ -1,0 +1,34 @@
+[
+  {
+    "Company": "DeltaX",
+    "Title": "Associate Product Engineer",
+    "From": "07/13/2020",
+    "To": "",
+    "Link": "https://www.deltax.com/",
+    "ImageName": "DeltaX.jpg"
+  },
+  {
+    "Company": "DeltaX",
+    "Title": "Full Stack Intern",
+    "From": "01/05/2020",
+    "To": "07/13/2020",
+    "Link": "https://www.deltax.com/",
+    "ImageName": "DeltaX.jpg"
+  },
+  {
+    "Company": "PectenLabs",
+    "Title": "Software Developer Intern",
+    "From": "07/04/2019",
+    "To": "08/03/2019",
+    "Link": "https://www.pecten.co.in/",
+    "ImageName": "PectenLabs.jpg"
+  },
+  {
+    "Company": "ExpertsHub",
+    "Title": "IoT Intern",
+    "From": "01/24/2018",
+    "To": "01/31/2018",
+    "Link": "https://www.expertshub.org/",
+    "ImageName": "ExpertsHub.jpg"
+  }
+]

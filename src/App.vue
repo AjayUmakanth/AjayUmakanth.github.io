@@ -1,32 +1,121 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div :class="navClass">
+      <a href="javascript:void(0);" class="icon" @click="myFunction">
+        <i :class="hamburgerMenu"></i>
+      </a>
+      <router-link 
+      to="/"  
+      @click.native ="setActiveClass('home')" 
+      :class="{ active: activeClass == 'home' }">
+        Home
+      </router-link>
+      <router-link 
+      to="/experience" 
+      @click.native ="setActiveClass('experience')" 
+      :class="{ active: activeClass == 'experience' }">
+        Experience
+      </router-link>
+      <router-link 
+      to="/contact" 
+      @click.native ="setActiveClass('contact')" 
+      :class="{ active: activeClass == 'contact' }">
+        Contact
+      </router-link>
     </div>
     <router-view/>
+    <Footer/>
   </div>
 </template>
-
+<script>
+import Footer from './components/Footer.vue'
+export default {
+  components: {
+    Footer
+  },
+  data() {
+    return {
+      navClass: "topnav",
+      activeClass: "home",
+      hamburgerMenu: "fa fa-bars"
+    }
+  },
+  methods: {
+    setActiveClass(className) {
+      this.activeClass = className
+    },
+    myFunction() {
+      if (this.navClass === "topnav") {
+        this.navClass += " responsive";
+        this.hamburgerMenu= "fa fa-times";
+      } else {
+        this.navClass = "topnav";
+        this.hamburgerMenu= "fa fa-bars";
+      }
+    },
+  }
+}
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.topnav {
+  background-color: #222;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
   text-align: center;
-  color: #2c3e50;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
-#nav {
-  padding: 30px;
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: #444 !important;
+  color: white !important;
 }
 </style>
