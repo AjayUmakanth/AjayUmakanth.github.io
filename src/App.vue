@@ -18,6 +18,12 @@
         Experience
       </router-link>
       <router-link 
+      to="/skills" 
+      @click.native ="setActiveClass('skills')" 
+      :class="{ active: activeClass == 'skills' }">
+        Skills
+      </router-link>
+      <router-link 
       to="/contact" 
       @click.native ="setActiveClass('contact')" 
       :class="{ active: activeClass == 'contact' }">

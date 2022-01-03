@@ -1,0 +1,26 @@
+[
+    {
+        "Name": "C#",
+        "ImageName": "csharp.png"
+    },
+    {
+        "Name": "VueJs",
+        "ImageName": "vuejs.png"
+    },
+    {
+        "Name": "HTML",
+        "ImageName": "html.png"
+    },
+    {
+        "Name": "CSS",
+        "ImageName": "css.png"
+    },
+    {
+        "Name": ".Net",
+        "ImageName": "dotnet.jpg"
+    },
+    {
+        "Name": ".Net Core",
+        "ImageName": "dotnetcore.png"
+    }
+]

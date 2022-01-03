@@ -60,7 +60,7 @@ export default {
 @media screen and (max-width: 600px) {
   #greet{
     font-size: 30px;
-    margin: 10px 30px;
+    margin: 40px 30px 80px 30px;
   }
   #fname {
     font-size: 60px;
