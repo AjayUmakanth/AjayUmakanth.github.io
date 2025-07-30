@@ -1,0 +1,358 @@
+/* Modern Portfolio Styles */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Navigation Styles */
+.topnav {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 60px;
+}
+
+.topnav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.topnav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.topnav a.active {
+  background: linear-gradient(135deg, #333333 0%, #555555 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.topnav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.topnav .icon {
+  display: none;
+  margin-left: auto;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.topnav .icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.topnav .icon i {
+  font-size: 20px;
+  color: white;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  position: relative;
+  margin: 40px 0;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 200px 0;
+}
+
+#greet {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about-text {
+  width: 100%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+
+
+.about .row {
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about img:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+#fname {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  margin-bottom: 30px;
+}
+
+.about-text {
+  text-align: left;
+  padding: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-align: justify;
+}
+
+.about .fa-quote-left,
+.about .fa-quote-right {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2rem;
+  margin: 0 10px;
+}
+
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .home {
+    padding: 20px 15px;
+    margin: 40px 0;
+  }
+
+  .topnav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .topnav a:not(.icon) {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+  
+  .topnav a.icon {
+    display: block;
+    align-self: flex-end;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .topnav.responsive {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .topnav.responsive a.icon {
+    align-self: flex-end;
+    position: relative;
+    z-index: 1001;
+  }
+  
+  .topnav.responsive a:not(.icon) {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+  }
+  
+  .topnav.responsive a:last-child {
+    border-bottom: none;
+  }
+  
+  .topnav.responsive a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+  }
+  
+  .topnav.responsive a.active {
+    background: linear-gradient(135deg, #333333 0%, #555555 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .topnav.responsive a.active::after {
+    display: none;
+  }
+  
+  /* Home section responsive */
+  #greet {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #fname {
+    font-size: 2rem;
+  }
+  
+  .about {
+    padding: 30px 20px;
+  }
+  
+  .about img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-text {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .edu-img, .prof-img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .skills img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home {
+    padding: 20px 15px;
+    margin: 100px 0 30px 0;
+  }
+  
+  #greet {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #fname {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .about img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .about {
+    padding: 20px 15px;
+  }
+  
+  .about-text {
+    padding: 10px;
+  }
+  
+  .about p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #555555 0%, #777777 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #777777 0%, #555555 100%);
+} 
