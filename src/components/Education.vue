@@ -20,6 +20,7 @@
                 class="edu-img"
                 :src="getImgUrl(education.ImageName)"
                 :alt="education.Institution"
+                @error="onImgError"
               />
               <div class="education-info">
                 <h4>
@@ -62,7 +63,14 @@ export default {
   },
   methods: {
     getImgUrl(pic) {
-      return require('../assets/'+pic)
+      try {
+        return require('../assets/'+pic)
+      } catch (e) {
+        return '/favicon.ico'
+      }
+    },
+    onImgError(event) {
+      event.target.src = '/favicon.ico'
     },
     /**
      * Returns formatted date range, e.g. "2016 – 2020"
@@ -170,7 +178,7 @@ export default {
 .edu-img {
   width: 60px;
   height: 60px;
-  border-radius: 12px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
   transition: transform 0.3s ease;

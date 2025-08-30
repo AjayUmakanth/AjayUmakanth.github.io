@@ -1,0 +1,49 @@
+[
+    {
+      "Name": "Explaining GNN with High-Level Concepts",
+      "Role": "Master’s Thesis",
+      "From": "2024",
+      "To": "2025",
+      "Technologies": ["PyTorch Geometric", "Python", "LLM Pipelines", "Ontolearn"],
+      "Description": [
+        "Developed a pipeline to process heterogeneous graph data.",
+        "Integrated LLM-based concept extraction into domain ontology.",
+        "Trained and explained Graph Neural Networks for improved interpretability."
+      ]
+    },
+    {
+      "Name": "Movie Platform",
+      "Role": "Full Stack Developer",
+      "From": "2021",
+      "To": "2021",
+      "Technologies": [".NET Core", "Vue.js", "MSSQL", "JWT Authentication"],
+      "Description": [
+        "Built IMDb-like platform for browsing movies, actors, and directors.",
+        "Implemented secure JWT authentication and TMDB API integration.",
+        "Developed responsive UI with search, filters, and reviews."
+      ]
+    },
+    {
+      "Name": "Food Blogging Website",
+      "Role": "Full Stack Developer",
+      "From": "2019",
+      "To": "2019",
+      "Technologies": ["PHP", "MySQL", "HTML", "CSS"],
+      "Description": [
+        "Created a recipe-sharing platform with user interaction features.",
+        "Implemented backend in PHP and MySQL, frontend in HTML/CSS."
+      ]
+    },
+    {
+      "Name": "Sundial Emulator",
+      "Role": "Developer",
+      "From": "2018",
+      "To": "2018",
+      "Technologies": ["OpenGL", "C++"],
+      "Description": [
+        "Developed a sundial simulation tool based on user’s longitude.",
+        "Used OpenGL to render accurate 3D sundial visualizations."
+      ]
+    }
+  ]
+  

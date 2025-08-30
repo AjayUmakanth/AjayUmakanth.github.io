@@ -2,7 +2,7 @@
     <footer class="footer-modern">
         <div class="footer-content">
             <div class="footer-text">
-                <span class="copyright">Ajay Umakanth. Contact me here</span>
+                <span class="copyright">Ajay Umakanth. ajayunp@gmail.com</span>
             </div>
             <div class="social-links">
                 <span v-for="(socialMedia, index) in filteredSocialMedia" :key="index">
@@ -92,6 +92,10 @@ export default {
 .social-links i {
   font-size: 1.2rem;
   color: white;
+}
+
+.copyright {
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,39 @@
+{
+    "Publications": [
+      {
+        "Title": "Smartphone Enabled Counterfeit Note Detection using Siamese Network",
+        "Link": "https://www.ijitee.org/wp-content/uploads/papers/v9i2S/B10581292S19.pdf",
+        "Journal": "International Journal of Innovative Technology and Exploring Engineering (IJITEE)",
+        "Date": "12/2019",
+        "ISSN": "2278-3075",
+        "Description": "Proposed a mobile-based counterfeit currency detection system using Siamese neural networks."
+      },
+      {
+        "Title": "Psychological State Diagnosis using Deep Learning Techniques",
+        "Link": "https://www.ijitee.org/wp-content/uploads/papers/v9i2S/B10461292S19.pdf",
+        "Journal": "International Journal of Innovative Technology and Exploring Engineering (IJITEE)",
+        "Date": "12/2019",
+        "ISSN": "2278-3075",
+        "Description": "Developed deep learning models for classifying psychological states from input signals."
+      }
+    ],
+    "Certifications": [
+      {
+        "Title": "PLACEHOLDER: e.g., Machine Learning Specialization",
+        "Issuer": "Coursera",
+        "Date": "MM/YYYY",
+        "CredentialID": "",
+        "Link": "",
+        "Description": "Brief description of the course or specialization."
+      },
+      {
+        "Title": "PLACEHOLDER: e.g., Python for Everybody",
+        "Issuer": "Coursera",
+        "Date": "MM/YYYY",
+        "CredentialID": "",
+        "Link": "",
+        "Description": "Brief description of the course."
+      }
+    ]
+  }
+  

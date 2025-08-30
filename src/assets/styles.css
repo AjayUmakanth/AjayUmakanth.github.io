@@ -38,7 +38,7 @@ body {
   min-height: 60px;
 }
 
-.topnav a {
+.topnav div {
   display: block;
   color: #f2f2f2;
   text-align: center;
@@ -48,30 +48,19 @@ body {
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
+  cursor: pointer;
 }
 
-.topnav a:hover {
+.topnav div:hover {
   background: rgba(255, 255, 255, 0.1);
   color: white;
   transform: translateY(-2px);
 }
 
-.topnav a.active {
+.topnav div.active {
   background: linear-gradient(135deg, #333333 0%, #555555 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-}
-
-.topnav a.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
 }
 
 .topnav .icon {
@@ -94,9 +83,9 @@ body {
 
 /* Section Styles */
 section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   position: relative;
-  margin: 40px 0;
+  margin: 0;
 }
 
 /* Home Section */
@@ -106,8 +95,9 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 60px 20px;
-  margin: 200px 0;
+  padding: 80px 20px;
+  margin: 0;
+  min-height: 100vh;
 }
 
 #greet {
@@ -128,6 +118,8 @@ section {
   padding: 40px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  text-align: left;
+  padding: 20px;
 }
 
 
@@ -140,7 +132,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
 .about img {
@@ -170,10 +161,6 @@ section {
   margin-bottom: 30px;
 }
 
-.about-text {
-  text-align: left;
-  padding: 20px;
-}
 
 .about p {
   font-size: 1.1rem;
@@ -196,6 +183,19 @@ section {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  /* Test to ensure media query is working */
+  body::before {
+    content: "Mobile view active";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: red;
+    color: white;
+    z-index: 9999;
+    padding: 5px;
+    font-size: 12px;
+  }
+  
   .home {
     padding: 20px 15px;
     margin: 40px 0;
@@ -206,11 +206,13 @@ section {
     align-items: stretch;
   }
   
-  .topnav a:not(.icon) {
-    display: none;
+  .topnav div:not(.icon) {
+    display: none !important;
     opacity: 0;
     transform: translateY(-20px);
     transition: all 0.3s ease;
+    /* Debug: Add a border to see if this rule is applied */
+    border: 2px solid red !important;
   }
   
   .topnav a.icon {
@@ -233,8 +235,8 @@ section {
     z-index: 1001;
   }
   
-  .topnav.responsive a:not(.icon) {
-    display: block;
+  .topnav.responsive div:not(.icon) {
+    display: block !important;
     opacity: 1;
     transform: translateY(0);
     text-align: center;
@@ -242,23 +244,23 @@ section {
     padding: 15px 20px;
   }
   
-  .topnav.responsive a:last-child {
-    border-bottom: none;
-  }
+  .topnav.responsive div:last-child {
+  border-bottom: none;
+}
   
-  .topnav.responsive a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateY(0);
-  }
+  .topnav.responsive div:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(0);
+}
   
-  .topnav.responsive a.active {
-    background: linear-gradient(135deg, #333333 0%, #555555 100%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  }
+  .topnav.responsive div.active {
+  background: linear-gradient(135deg, #333333 0%, #555555 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
   
-  .topnav.responsive a.active::after {
-    display: none;
-  }
+  .topnav.responsive div.active::after {
+  display: none;
+}
   
   /* Home section responsive */
   #greet {

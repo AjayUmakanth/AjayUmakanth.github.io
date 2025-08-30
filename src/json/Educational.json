@@ -1,7 +1,15 @@
 [
   {
+    "Institution": "Universität Paderborn",
+    "Course": "Master of Science, Computer Science",
+    "From": 2022,
+    "To": 2025,
+    "Link": "https://www.uni-paderborn.de/",
+    "ImageName": "UniPaderborn.jpg"
+  },
+  {
     "Institution": "RNS Institute of Technology",
-    "Course": "BE, Computer Science",
+    "Course": "Bachelor of Engineering, Computer Science",
     "From": 2016,
     "To": 2020,
     "Link": "https://www.rnsit.ac.in/",

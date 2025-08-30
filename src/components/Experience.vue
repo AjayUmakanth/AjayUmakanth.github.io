@@ -12,22 +12,43 @@
           color="#ffffff"
         >
           <div class="experience-item">
-            <div class="date-range">
-              {{ formatPeriod(profession.From, profession.To) }}
-            </div>
-            <div class="experience-content">
+            <div class="experience-header">
               <img
                 class="prof-img"
                 :src="getImgUrl(profession.ImageName)"
                 :alt="profession.Company"
+                @error="onImgError"
               />
-              <div class="experience-info">
-                <h4>
+              <div class="header-info">
+                <h4 class="company-name">
                   <a :href="profession.Link" target="_blank">
                     {{ profession.Company }}
                   </a>
                 </h4>
-                <h5>{{ profession.Title }}</h5>
+                <div class="position-title">
+                  {{ profession.Title }}
+                </div>
+              </div>
+            </div>
+            <div class="experience-content">
+              <div class="experience-info">
+                <div class="meta-info">
+                  <div class="meta-item">
+                    <i class="fa fa-clock-o meta-icon"></i>
+                    <span class="meta-text">{{ formatPeriod(profession.From, profession.To) }}</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fa fa-map-marker meta-icon"></i>
+                    <span class="meta-text">{{ profession.Location || 'Remote' }}</span>
+                  </div>
+                </div>
+                <div class="description-points">
+                  <ul>
+                    <li v-for="(point, pointIndex) in profession.Description" :key="pointIndex">
+                      {{ point }}
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -63,7 +84,14 @@ export default {
   },
   methods: {
     getImgUrl(pic) {
-      return require('../assets/' + pic)
+      try {
+        return require('../assets/' + pic)
+      } catch (e) {
+        return '/favicon.ico'
+      }
+    },
+    onImgError(event) {
+      event.target.src = '/favicon.ico'
     },
     /**
      * Returns formatted date range, e.g. "Jan, 2020 – Present"
@@ -80,15 +108,15 @@ export default {
 <style scoped>
 /* Experience Section */
 .experience {
-  padding: 60px 20px;
-  margin: 40px 0;
+  padding: 40px 20px;
+  margin: 30px 0;
 }
 
 .experience h1 {
   text-align: center;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -99,7 +127,7 @@ export default {
   height: 2px;
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
   background-size: 200% 100%;
-  margin: 0 auto 40px;
+  margin: 0 auto 25px;
   width: 80%;
   border-radius: 1px;
   position: relative;
@@ -123,7 +151,7 @@ export default {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
-  padding: 40px;
+  padding: 30px;
 }
 
 /* Timeline customization */
@@ -132,7 +160,7 @@ export default {
 }
 
 :deep(.ant-timeline-item) {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 :deep(.ant-timeline-item-tail) {
@@ -148,65 +176,127 @@ export default {
 .experience-item {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   margin-left: 20px;
 }
 
-.date-range {
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.company-name a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.company-name a:hover {
+  color: #cccccc;
+}
+
+.position-title {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-style: italic;
 }
 
 /* Experience content styling */
 .experience-content {
   display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 15px 0;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px 0;
   transition: all 0.3s ease;
+  margin-left: 75px; /* Align with the header info text */
 }
 
 .experience-content:hover {
-  transform: translateX(10px);
+  transform: translateX(8px);
 }
 
 .prof-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 
 .experience-content:hover .prof-img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.experience-info h4 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #ffffff;
+.experience-info {
+  flex: 1;
 }
 
-.experience-info h5 {
-  font-size: 1.1rem;
+/* Meta info styling */
+.meta-info {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta-icon {
+  color: #4CAF50;
+  font-size: 1rem;
+  width: 16px;
+  text-align: center;
+}
+
+.meta-text {
   color: rgba(255, 255, 255, 0.9);
-  margin: 0;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
-.experience-info a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.description-points ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.experience-info a:hover {
-  color: #cccccc;
+.description-points li {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 18px;
+}
+
+.description-points li::before {
+  content: "•";
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* Start marker styling */
@@ -248,16 +338,29 @@ export default {
   }
   
   .experience-item {
-    gap: 12px;
+    gap: 8px;
     margin-left: 15px;
   }
   
-  .date-range {
+  .experience-header {
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .company-name {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+  
+  .position-title {
     font-size: 0.9rem;
+    margin-bottom: 0;
   }
   
   .experience-content {
-    gap: 15px;
+    gap: 12px;
+    margin-left: 62px; /* Adjust for smaller logo */
+    padding: 8px 0;
   }
   
   .prof-img {
@@ -265,24 +368,31 @@ export default {
     height: 50px;
   }
   
-  .experience-info h4 {
-    font-size: 1.2rem;
+  .meta-info {
+    gap: 15px;
+    margin-bottom: 12px;
   }
   
-  .experience-info h5 {
-    font-size: 1rem;
+  .meta-text {
+    font-size: 0.85rem;
+  }
+  
+  .description-points li {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    padding-left: 16px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .experience {
-    padding: 40px 15px;
-    margin: 30px 0;
+    padding: 30px 15px;
+    margin: 25px 0;
   }
   
   .experience h1 {
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   
   .timeline-container {
@@ -291,16 +401,29 @@ export default {
   }
   
   .experience-item {
-    gap: 10px;
+    gap: 6px;
     margin-left: 10px;
   }
   
-  .date-range {
-    font-size: 0.85rem;
+  .experience-header {
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .company-name {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+  }
+  
+  .position-title {
+    font-size: 0.8rem;
+    margin-bottom: 0;
   }
   
   .experience-content {
-    gap: 12px;
+    gap: 10px;
+    margin-left: 55px; /* Adjust for smaller logo */
+    padding: 6px 0;
   }
   
   .prof-img {
@@ -308,12 +431,25 @@ export default {
     height: 45px;
   }
   
-  .experience-info h4 {
-    font-size: 1.1rem;
+  .meta-info {
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-direction: column;
   }
   
-  .experience-info h5 {
-    font-size: 0.9rem;
+  .meta-text {
+    font-size: 0.8rem;
+  }
+  
+  .description-points li {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    padding-left: 14px;
   }
 }
 </style>
+
+
+
+
+

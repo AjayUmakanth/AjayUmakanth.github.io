@@ -111,7 +111,7 @@ export default {
 .skills img {
   width: 80px;
   height: 80px;
-  border-radius: 15px;
+  border-radius: 50%;
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }

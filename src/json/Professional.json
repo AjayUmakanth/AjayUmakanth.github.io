@@ -1,34 +1,83 @@
 [
   {
+    "Company": "Prisma Schools",
+    "Title": "Lead Full Stack Developer",
+    "From": "05/01/2025",
+    "To": "",
+    "Link": "https://www.prisma-schools.com",
+    "ImageName": "PrismaSchools.jpg",
+    "Location": "Paderborn, Germany",
+    "Description": [
+      "Leading full-stack development for educational platforms in a fast-paced international environment.",
+      "Designing scalable architectures, REST APIs, and integrating modern web technologies."
+    ]
+  },
+  {
+    "Company": "HEIDI - Heimat Digital GmbH",
+    "Title": "Lead Full Stack Developer",
+    "From": "01/01/2023",
+    "To": "04/30/2025",
+    "Link": "https://heimat-digital.com",
+    "ImageName": "Heidi.jpg",
+    "Location": "Paderborn, Germany",
+    "Description": [
+      "Led development of an open-source smart-city platform used by 100+ municipalities and 20K+ users.",
+      "Built scalable architecture, REST APIs, microservices, and automated testing pipelines.",
+      "Integrated IoT-enabled access control and cashierless payment systems via NFC/QR for public and retail environments with 500+ users",
+      "Built web scrapers and LLM-based automation pipelines to deliver real-time, localized citizen content for different localities"
+    ]
+  },
+  {
     "Company": "DeltaX",
     "Title": "Associate Product Engineer",
-    "From": "07/13/2020",
-    "To": "",
+    "From": "07/01/2020",
+    "To": "06/30/2022",
     "Link": "https://www.deltax.com/",
-    "ImageName": "DeltaX.jpg"
+    "ImageName": "DeltaX.jpg",
+    "Location": "Bangalore, India",
+    "Description": [
+      "Developed ad campaign management features with Vue.js, Node.js, and ASP.NET Core.",
+      "Integrated Facebook, Google, and LinkedIn APIs for centralized ad creation and scheduling.",
+      "Created BDD test suites in Cucumber and automated CI/CD pipelines with Jenkins."
+    ]
   },
   {
     "Company": "DeltaX",
     "Title": "Full Stack Intern",
-    "From": "01/05/2020",
-    "To": "07/13/2020",
+    "From": "01/01/2020",
+    "To": "07/01/2020",
     "Link": "https://www.deltax.com/",
-    "ImageName": "DeltaX.jpg"
+    "ImageName": "DeltaX.jpg",
+    "Location": "Bangalore, India",
+    "Description": [
+      "Analyzed cross-platform ad reach overlap using data visualization.",
+      "Built chord diagrams and cohort analysis tables in Vue.js and .NET Core."
+    ]
   },
   {
-    "Company": "PectenLabs",
-    "Title": "Software Developer Intern",
-    "From": "07/04/2019",
-    "To": "08/03/2019",
+    "Company": "Pecten Labs",
+    "Title": "Project Intern",
+    "From": "07/01/2019",
+    "To": "08/31/2019",
     "Link": "https://www.pecten.co.in/",
-    "ImageName": "PectenLabs.jpg"
+    "ImageName": "PectenLabs.jpg",
+    "Location": "Bangalore, India",
+    "Description": [
+      "Developed a stock market analysis and prediction tool using Selenium for web scraping.",
+      "Used Google Cloud for processing and analyzing financial data."
+    ]
   },
   {
-    "Company": "ExpertsHub",
+    "Company": "ExpertsHub Industry Skill Development Centre",
     "Title": "IoT Intern",
-    "From": "01/24/2018",
+    "From": "01/01/2018",
     "To": "01/31/2018",
     "Link": "https://www.expertshub.org/",
-    "ImageName": "ExpertsHub.jpg"
+    "ImageName": "ExpertsHub.jpg",
+    "Location": "Bangalore, India",
+    "Description": [
+      "Built an IoT-based smart home automation system using Raspberry Pi and NodeMCU.",
+      "Integrated Alexa and Android app controls for appliances."
+    ]
   }
 ]
