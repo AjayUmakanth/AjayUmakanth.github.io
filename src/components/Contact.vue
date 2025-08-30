@@ -291,8 +291,9 @@ export default {
   }
   
   .contact-container {
-    width: 90%;
-    padding: 30px;
+    width: 95%;
+    padding: 30px 20px 30px 25px;
+    margin: 0 auto;
   }
   
   .contact-content {
@@ -302,7 +303,8 @@ export default {
 
   .contact-left,
   .contact-right {
-    padding: 0;
+    padding: 0 0 0 10px;
+    width: 100%;
   }
 
   .contact-intro h3 {
@@ -352,8 +354,9 @@ export default {
   }
   
   .contact-container {
-    width: 95%;
-    padding: 20px;
+    width: 98%;
+    padding: 20px 15px 20px 20px;
+    margin: 0 auto;
   }
   
   .contact-content {
