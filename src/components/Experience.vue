@@ -359,7 +359,7 @@ export default {
   
   .experience-content {
     gap: 12px;
-    margin-left: 62px; /* Adjust for smaller logo */
+    margin-left: 0; /* Remove margin for mobile */
     padding: 8px 0;
   }
   
@@ -422,7 +422,7 @@ export default {
   
   .experience-content {
     gap: 10px;
-    margin-left: 55px; /* Adjust for smaller logo */
+    margin-left: 0; /* Remove margin for mobile */
     padding: 6px 0;
   }
   
