@@ -1,26 +1,33 @@
 [
-    {
-        "Name": "C#",
-        "ImageName": "csharp.png"
-    },
-    {
-        "Name": "VueJs",
-        "ImageName": "vuejs.png"
-    },
-    {
-        "Name": "HTML",
-        "ImageName": "html.png"
-    },
-    {
-        "Name": "CSS",
-        "ImageName": "css.png"
-    },
-    {
-        "Name": ".Net",
-        "ImageName": "dotnet.jpg"
-    },
-    {
-        "Name": ".Net Core",
-        "ImageName": "dotnetcore.png"
-    }
+  {
+    "group": "Frontend",
+    "skills": [
+      { "Name": "VueJs", "icon": "simple-icons/vuedotjs" },
+      { "Name": "React", "icon": "simple-icons/react" },
+      { "Name": "JavaScript", "icon": "simple-icons/javascript" },
+      { "Name": "TypeScript", "icon": "simple-icons/typescript" },
+      { "Name": "HTML", "icon": "simple-icons/html5" },
+      { "Name": "CSS", "icon": "simple-icons/css3" }
+    ]
+  },
+  {
+    "group": "Backend",
+    "skills": [
+      { "Name": ".Net", "icon": "simple-icons/dotnet" },
+      { "Name": "Python", "icon": "simple-icons/python" },
+      { "Name": "NodeJs", "icon": "simple-icons/nodedotjs" },
+      { "Name": "Docker", "icon": "simple-icons/docker" },
+      { "Name": "Kubernetes", "icon": "simple-icons/kubernetes" },
+      { "Name": "Git", "icon": "simple-icons/git" }
+    ]
+  },
+  {
+    "group": "Database",
+    "skills": [
+      { "Name": "MySQL", "icon": "simple-icons/mysql" },
+      { "Name": "PostgreSQL", "icon": "simple-icons/postgresql" },
+      { "Name": "MSSQL", "icon": "simple-icons/microsoftsqlserver" },
+      { "Name": "MongoDB", "icon": "simple-icons/mongodb" }
+    ]
+  }
 ]
