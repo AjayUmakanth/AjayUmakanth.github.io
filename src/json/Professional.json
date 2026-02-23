@@ -8,8 +8,10 @@
     "ImageName": "PrismaSchools.png",
     "Location": "Paderborn, Germany",
     "Description": [
-      "Leading full-stack development for educational platforms in a fast-paced international environment.",
-      "Designing scalable architectures, REST APIs, and integrating modern web technologies."
+      "Developed and maintained a fullstack EdTech tutoring platform used by 30+ schools and 10,000+ users",
+      "Designed REST APIs, microservices, background jobs, and authentication workflows.",
+      "Implemented CI/CD pipelines and automated testing for reliable deployments.",
+      "Worked with stakeholders to gather requirements and translate them into technical solutions."
     ]
   },
   {
@@ -21,10 +23,11 @@
     "ImageName": "Heidi.jpg",
     "Location": "Paderborn, Germany",
     "Description": [
-      "Led development of an open-source smart-city platform used by 100+ municipalities and 20K+ users.",
-      "Built scalable architecture, REST APIs, microservices, and automated testing pipelines.",
-      "Integrated IoT-enabled access control and cashierless payment systems via NFC/QR for public and retail environments with 500+ users",
-      "Built web scrapers and LLM-based automation pipelines to deliver real-time, localized citizen content for different localities"
+      "Led development of an open-source smart-city platform serving 100+ municipalities and 20K+ users",
+      "Designed and implemented REST APIs, modular microservices and automated testing pipelines to support multiple tenant deployments.",
+      "Built CI/CD pipelines using GitHub Actions supporting 15+ parallel deployments across environments.",
+      "Developed web scraping and LLM-based pipelines to fetch, process, and publish localized municipal content.",
+      "Integrated IoT-based access control and cashierless payment systems (NFC/QR) for public and retail use cases."
     ]
   },
   {
@@ -36,9 +39,11 @@
     "ImageName": "DeltaX.jpg",
     "Location": "Bangalore, India",
     "Description": [
-      "Developed ad campaign management features with Vue.js, Node.js, and ASP.NET Core.",
-      "Integrated Facebook, Google, and LinkedIn APIs for centralized ad creation and scheduling.",
-      "Created BDD test suites in Cucumber and automated CI/CD pipelines with Jenkins."
+      "Developed and maintained frontend features and backend REST APIs for an integrated ad campaign management platform",
+      "Integrated external advertising APIs including Facebook, Google, and LinkedIn to enable centralized campaign creation, bulk scheduling, and performance tracking.",
+      "Designed and optimized database queries and stored procedures to support large campaign datasets and reporting workflows.",
+      "Authored BDD test suites using Cucumber to improve automated test coverage and reduce regression defects by 25%.",
+      "Built and maintained Jenkins CI/CD pipelines implementing blue-green deployments, reducing release time from ~10 minutes to ~30 seconds."
     ]
   },
   {
