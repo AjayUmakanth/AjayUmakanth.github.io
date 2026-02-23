@@ -296,7 +296,7 @@ export default {
   min-height: 2.5rem;
   display: flex;
   align-items: left;
-  justify-content: center;
+  justify-content: left;
 }
 
 .typing-text {
@@ -413,6 +413,10 @@ export default {
 @media screen and (max-width: 425px) {
   .name-container {
     margin-bottom: 5px;
+  }
+
+  .title {
+    justify-content: center;
   }
 
   .profile-content {
