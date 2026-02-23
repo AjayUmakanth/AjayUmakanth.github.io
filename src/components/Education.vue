@@ -29,6 +29,25 @@
                   </a>
                 </h4>
                 <h5>{{ education.Course }}</h5>
+                <h6
+                  v-if="education.Subtitle"
+                  class="education-subtitle"
+                >
+                  {{ education.Subtitle }}
+                </h6>
+                <div
+                  v-if="education.Description && education.Description.length"
+                  class="education-description"
+                >
+                  <ul>
+                    <li
+                      v-for="(point, pointIndex) in education.Description"
+                      :key="pointIndex"
+                    >
+                      {{ point }}
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -134,16 +153,15 @@ export default {
 }
 
 /* Timeline customization */
-:deep(.ant-timeline) {
+::deep(.ant-timeline) {
   color: white;
 }
 
-
-:deep(.ant-timeline-item-tail) {
+::deep(.ant-timeline-item-tail) {
   border-left: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-:deep(.ant-timeline-item-head) {
+::deep(.ant-timeline-item-head) {
   background-color: #ffffff;
   border-color: #ffffff;
 }
@@ -203,6 +221,14 @@ export default {
   font-weight: 500;
 }
 
+.education-subtitle {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
 .education-info a {
   color: #ffffff;
   text-decoration: none;
@@ -211,6 +237,30 @@ export default {
 
 .education-info a:hover {
   color: #cccccc;
+}
+
+.education-description ul {
+  list-style: none;
+  padding: 8px 0 0 0;
+  margin: 0;
+}
+
+.education-description li {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 18px;
+}
+
+.education-description li::before {
+  content: "•";
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 /* Responsive Design */
@@ -293,4 +343,5 @@ export default {
     font-size: 0.9rem;
   }
 }
-</style> 
+</style>
+

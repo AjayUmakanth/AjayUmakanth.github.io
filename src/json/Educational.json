@@ -5,7 +5,14 @@
     "From": 2022,
     "To": 2025,
     "Link": "https://www.uni-paderborn.de/",
-    "ImageName": "UniPaderborn.jpg"
+    "ImageName": "UniPaderborn.jpg",
+    "Subtitle": "Explaining GNN with High-Level Concepts — Master’s Thesis",
+    "Description": [
+      "Designed and implemented a Python-based data processing pipeline to convert raw inputs into heterogeneous graph formats using PyTorch Geometric.",
+      "Leveraged large language model (LLM) pipelines to extract high-level groupings and concepts, integrating them into a domain ontology for richer semantic modeling.",
+      "Developed and trained multiple Graph Neural Network (GNN) architectures on both homogeneous and heterogeneous graph data.",
+      "Employed the EvoLearner class from the Ontolearn library to generate explanations for GNN predictions and evaluate the impact of concept integration on model behavior."
+    ]
   },
   {
     "Institution": "RNS Institute of Technology",
@@ -13,22 +20,13 @@
     "From": 2016,
     "To": 2020,
     "Link": "https://www.rnsit.ac.in/",
-    "ImageName": "RNSIT.jpg"
-  },
-  {
-    "Institution": "Sri Bhagawan Mahaveer Jain College",
-    "Course": "Pre University College",
-    "From": 2014,
-    "To": 2016,
-    "Link": "https://www.jaincollege.ac.in/",
-    "ImageName": "SBMJC.png"
-  },
-  {
-    "Institution": "Florence Public School",
-    "Course": "School",
-    "From": 2001,
-    "To": 2004,
-    "Link": "https://www.florenceschool.edu.in/",
-    "ImageName": "FPS.png"
+    "ImageName": "RNSIT.jpg",
+    "Subtitle": "Psychological State Diagnosis using Deep Learning — Bachelor’s Major Project",
+    "Description": [
+      "Designed and implemented a multimodal depression-detection system in Python combining EEG signals from wearable devices, facial emotion recognition via smartphone camera, and PHQ-9 questionnaire data.",
+      "Processed brain-wave signals (α, β, γ, θ, δ), facial emotion frames, and demographic inputs to train deep-learning models for psychological state classification.",
+      "Built an end-to-end pipeline for data acquisition, preprocessing, CNN-based emotion recognition, and neural network training.",
+      "Enabled objective mental-health screening using involuntary physiological and behavioral cues in addition to self-reported data."
+    ]
   }
 ]
