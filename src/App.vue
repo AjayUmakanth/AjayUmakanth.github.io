@@ -274,7 +274,7 @@ export default {
 }
 
 .name-container {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .full-name {
@@ -362,6 +362,10 @@ export default {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+  .name-container {
+    margin-bottom: 24px;
+  }
+
   .profile-content {
     flex-direction: column;
     align-items: center;
@@ -386,7 +390,7 @@ export default {
 
   .title {
     font-size: 1.8rem;
-    margin-bottom: 35px;
+    margin-bottom: 18px;
   }
   
   .social-links {
@@ -407,6 +411,10 @@ export default {
 }
 
 @media screen and (max-width: 425px) {
+  .name-container {
+    margin-bottom: 5px;
+  }
+
   .profile-content {
     gap: 40px;
   }
@@ -423,7 +431,7 @@ export default {
 
   .title {
     font-size: 1.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
   }
   
   .social-links {

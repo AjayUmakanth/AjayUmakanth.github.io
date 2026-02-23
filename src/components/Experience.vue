@@ -386,8 +386,8 @@ export default {
 
 @media screen and (max-width: 480px) {
   .experience {
-    padding: 30px 15px;
-    margin: 25px 0;
+    padding: 15px 15px;
+    margin: 15px 0;
   }
   
   .experience h1 {
