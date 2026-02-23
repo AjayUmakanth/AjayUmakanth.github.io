@@ -296,7 +296,7 @@ export default {
   min-height: 2.5rem;
   display: flex;
   align-items: left;
-  justify-content: left;
+  justify-content: center;
 }
 
 .typing-text {
