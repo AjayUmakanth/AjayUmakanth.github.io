@@ -14,14 +14,16 @@
           <div class="experience-item">
             <div class="experience-header">
               <img
+                v-if="profession.ImageName"
                 class="prof-img"
                 :src="getImgUrl(profession.ImageName)"
                 :alt="profession.Company"
                 @error="onImgError"
               />
+              <div v-else class="company-initial" aria-hidden="true">{{ profession.Company.charAt(0) }}</div>
               <div class="header-info">
                 <h4 class="company-name">
-                  <a :href="profession.Link" target="_blank">
+                  <a :href="profession.Link" target="_blank" rel="noopener noreferrer">
                     {{ profession.Company }}
                   </a>
                 </h4>
@@ -106,6 +108,20 @@ export default {
 </script>
 
 <style scoped>
+.company-initial {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
 /* Experience Section */
 .experience {
   padding: 40px 20px;
@@ -448,7 +464,6 @@ export default {
   }
 }
 </style>
-
 
 
 

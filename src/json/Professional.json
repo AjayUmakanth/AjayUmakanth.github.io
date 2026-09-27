@@ -1,9 +1,23 @@
 [
   {
+    "Company": "Clember",
+    "Title": "DevOps Software Engineer",
+    "From": "03/01/2026",
+    "To": "",
+    "Link": "https://clember.ai",
+    "ImageName": "Clember.jpg",
+    "Location": "Paderborn, Germany",
+    "Description": [
+      "Built the platform’s cloud architecture with a focus on security, scalability, and maintainability, adopting IaC (Terraform and Ansible) to standardize and automate infrastructure management.",
+      "Strengthened the platform’s security architecture by introducing infrastructure-level security controls, standardized configurations, and automated CI/CD pipelines.",
+      "Developed Model Context Protocol (MCP) tools and integrated AI-driven capabilities to enable structured interaction between AI systems and platform services."
+    ]
+  },
+  {
     "Company": "Prisma Schools",
     "Title": "Lead Full Stack Developer",
     "From": "05/01/2025",
-    "To": "",
+    "To": "09/12/2025",
     "Link": "https://www.prisma-schools.com",
     "ImageName": "PrismaSchools.png",
     "Location": "Paderborn, Germany",

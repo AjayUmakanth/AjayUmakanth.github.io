@@ -19,6 +19,9 @@
       <div @click="scrollToSection('skills', $event)" :class="{ active: activeClass == 'skills' }">
         Skills
       </div>
+      <div @click="scrollToSection('publications', $event)" :class="{ active: activeClass == 'publications' }">
+        Publications
+      </div>
       <div @click="scrollToSection('contact', $event)" :class="{ active: activeClass == 'contact' }">
         Contact
       </div>
@@ -67,6 +70,8 @@
     <!-- Skills Component -->
     <Skills />
 
+    <Publications />
+
     <!-- Contact Component -->
     <Contact />
 
@@ -80,6 +85,7 @@ import Experience from './components/Experience.vue'
 import Education from './components/Education.vue'
 import Skills from './components/Skills.vue'
 import Contact from './components/Contact.vue'
+import Publications from './components/Publications.vue'
 import './assets/styles.css'
 import socialMediaHandles from './json/SocialMediaHandles.json'
 
@@ -89,7 +95,8 @@ export default {
     Experience,
     Education,
     Skills,
-    Contact
+    Contact,
+    Publications
   },
   data() {
     return {
@@ -147,7 +154,7 @@ export default {
       }
     },
     updateActiveSection() {
-      const sections = ['home', 'experience', 'education', 'skills', 'contact']
+      const sections = ['home', 'experience', 'education', 'skills', 'publications', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (let i = sections.length - 1; i >= 0; i--) {

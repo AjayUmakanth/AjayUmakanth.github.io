@@ -32,15 +32,19 @@
                 <div class="contact-type">{{ socialMedia.Type }}</div>
                 <div class="contact-name">
                   {{ socialMedia.Name }}
-                  <a target="_blank" :href="socialMedia.Link">
+                  <a target="_blank" :href="socialMedia.Link" rel="noopener noreferrer" :aria-label="`Open ${socialMedia.Type}`">
                     <i class="fa fa-external-link"/>
                   </a>
                 </div>
+                <a v-if="socialMedia.Type === 'LinkedIn'" class="profile-details" :href="socialMedia.Link" target="_blank" rel="noopener noreferrer">
+                  Certifications &amp; recommendations <span aria-hidden="true">↗</span>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 </template>
@@ -62,6 +66,9 @@ export default {
 </script>
 
 <style scoped>
+.profile-details { display: inline-block; margin-top: 8px; color: #bdbdbd; font-size: 0.85rem; line-height: 1.6; }
+.profile-details:hover, .profile-details:focus-visible { color: white; text-decoration: underline; }
+
 /* Contact Section */
 .contact {
   padding: 60px 20px;
